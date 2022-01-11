@@ -29,9 +29,7 @@ export const Document = ({
 export default function App() {
   return (
     <Document title="Remix: So great, it's funny!">
-      <Layout>
-        <Outlet />
-      </Layout>
+      <Outlet />
     </Document>
   );
 }

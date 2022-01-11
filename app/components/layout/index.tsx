@@ -3,7 +3,13 @@ import { Box, Drawer } from "@mui/material";
 import Sidebar from "~/components/ui/Sidebar";
 import theme from "~/lib/theme/theme";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({
+  children,
+  logged,
+}: {
+  children: React.ReactNode;
+  logged: boolean;
+}) {
   return (
     <Box
       sx={{
@@ -32,13 +38,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           position: "relative",
           backgroundColor: "white",
           height: "100vh",
-          wrap: "nowrap",
-          bgcolor: "purple",
+          flexWrap: "nowrap",
           flexDirection: "column",
         }}
       >
         <Box sx={{ display: "flex", flexShrink: 1 }}>
-          <AppBar logged={true} />
+          <AppBar logged={logged} />
         </Box>
         <Box
           sx={{
