@@ -4,6 +4,7 @@
   "description": "",
   "license": "",
   "scripts": {
+    "prebuild": "npm run clean",
     "build": "remix build",
     "dev": "node -r dotenv/config node_modules/.bin/remix dev",
     "postinstall": "remix setup node",

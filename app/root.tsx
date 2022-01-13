@@ -1,6 +1,11 @@
 import { Box } from "@mui/material";
 import { LiveReload, Meta, Links, Scripts, Outlet, useCatch } from "remix";
 import Layout from "~/components/layout";
+import styles from "~/styles/tailwind.css";
+
+// export function links() {
+//   return [{ rel: "stylesheet", href: styles }];
+// }
 
 export const Document = ({
   children,

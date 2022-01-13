@@ -1,5 +1,5 @@
-import { LoaderFunction, Outlet, json, useLoaderData, redirect } from "remix";
-import { Box } from "@mui/material";
+import { Outlet } from "remix";
+import { Grid, Container, Box } from "@mui/material";
 
 export default function Index2() {
   return (
@@ -8,8 +8,7 @@ export default function Index2() {
         display: "flex",
         width: "100vw",
         height: "100vh",
-        // alignContent: "stretch",
-        backgroundColor: "red",
+        alignItems: "center",
         justifyContent: "center",
       }}
     >
