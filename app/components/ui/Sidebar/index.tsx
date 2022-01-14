@@ -30,7 +30,7 @@ const styles = {
     width: 240,
     height: "100vh",
     overflow: "hidden",
-    backgroundColor: theme.palette.text.primary,
+    backgroundColor: "#FF6B6B",
     padding: theme.spacing(2, 0, 3),
     borderRight: 0,
   },
@@ -66,7 +66,7 @@ export default function Sidebar() {
         "& .MuiDrawer-paper": {
           width: drawerWidth,
           boxSizing: "border-box",
-          bgcolor: "#2B344F",
+          bgcolor: "#FF6B6B",
           color: "white",
         },
       }}
@@ -76,7 +76,7 @@ export default function Sidebar() {
       <List>
         {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
           <ListItem button key={text}>
-            <ListItemIcon sx={{ color: theme.palette.text.secondary }}>
+            <ListItemIcon sx={{ color: "white" }}>
               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
             </ListItemIcon>
             <ListItemText secondary={text} />
@@ -86,12 +86,8 @@ export default function Sidebar() {
       <Divider />
       <List>
         {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem
-            button
-            key={text}
-            sx={{ color: theme.palette.text.secondary }}
-          >
-            <ListItemIcon sx={{ color: theme.palette.text.secondary }}>
+          <ListItem button key={text} sx={{ color: "white" }}>
+            <ListItemIcon sx={{ color: "white" }}>
               {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
             </ListItemIcon>
             <ListItemText secondary={text} />

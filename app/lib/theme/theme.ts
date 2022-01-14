@@ -9,7 +9,7 @@ const theme = createTheme({
     fontSize: 14,
     fontFamily: "'Lato', sans-serif",
     h1: {
-      fontSize: "2rem",
+      fontSize: "3rem",
       fontFamily: "'CodecPro', sans-serif",
       fontWeight: 800,
       lineHeight: "130%",

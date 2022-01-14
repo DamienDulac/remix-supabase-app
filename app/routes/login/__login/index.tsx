@@ -50,59 +50,58 @@ function Item(props: BoxProps) {
 
 export default function LoginPage() {
   return (
-    <Grid
-      sx={{
-        border: "1px solid black",
-        borderRadius: 2,
-        padding: 12,
-      }}
-    >
-      <Grid>
-        <Typography variant="h2">Sign in to Dashboard</Typography>
+    <div>
+      <Grid item mb={8}>
+        <Typography variant="h1" sx={{ color: "#FF6B6B" }}>
+          Sign in to Dashboard
+        </Typography>
       </Grid>
       <Form method="post">
-        <Grid sx={{ alignItems: "center" }}>
-          <Item>
-            <TextField
-              fullWidth
-              id="outlined-email-input"
-              label="Email"
-              type="text"
-              autoComplete="email"
-              name="email"
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <AccountCircle />
-                  </InputAdornment>
-                ),
-              }}
-            />
-          </Item>
-          <Item>
-            <TextField
-              fullWidth
-              id="outlined-password-input"
-              label="Password"
-              type="password"
-              autoComplete="current-password"
-              name="password"
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <Password />
-                  </InputAdornment>
-                ),
-              }}
-            />
-          </Item>
-          <Item>
-            <Button fullWidth type="submit" variant="contained">
-              LOG IN
-            </Button>
-          </Item>
+        <Grid item sx={{ mb: 3, mt: 3 }} xs={12}>
+          <TextField
+            fullWidth
+            id="outlined-email-input"
+            label="Email"
+            type="text"
+            autoComplete="email"
+            name="email"
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <AccountCircle />
+                </InputAdornment>
+              ),
+            }}
+          />
+        </Grid>
+        <Grid item sx={{ mb: 3 }}>
+          <TextField
+            fullWidth
+            id="outlined-password-input"
+            label="Password"
+            type="password"
+            autoComplete="current-password"
+            name="password"
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <Password />
+                </InputAdornment>
+              ),
+            }}
+          />
+        </Grid>
+        <Grid item sx={{ mb: 3 }}>
+          <Button
+            fullWidth
+            sx={{ backgroundColor: "#FF6B6B" }}
+            type="submit"
+            variant="contained"
+          >
+            LOG IN
+          </Button>
         </Grid>
       </Form>
-    </Grid>
+    </div>
   );
 }
